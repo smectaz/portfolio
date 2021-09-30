@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="nicolas Schwachtgen" />
+		<meta
+			name="description"
+			content="Mon portfolio pour vous presentez mes projets"
+		/>
+		<link rel="stylesheet" href="inc/css/style.css" />
+		<title>Mon Portfolio</title>
+	</head>
+
+	<body>
+		<!--menu caché pour les malvoyant-->
+		<ul class="cache">
+			<li><a href="#projet" title="Mes Projets">Mes Projets</a></li>
+			<li><a href="#cv" title="Ma Formation">Ma Formation</a></li>
+			<li><a href="#article" title="Mes Article">Mes Articles</a></li>
+			<li><a href="#contact" title="Contactez Moi">Contactez-Moi</a></li>
+		</ul>
+
+		<header>
+			<div>
+				<a href="#"
+					><img
+						src="inc/images/pexels-cottonbro-4709285.jpg"
+						alt="Logo du Portfolio"
+				/></a>
+				<h1>Portfolio de Nicolas Schwachtgen</h1>
+			</div>
+			<form action="#" method="get">
+				<input type="search" name="search" id="search" />
+				<input type="submit" value="rechercher" />
+			</form>
+		</header>
+
+		<nav>
+			<div class="hamburger-menu">
+				<input id="menu-toggle" type="checkbox" />
+				<label class="menu-btn" for="menu-toggle">
+					<span></span>
+				</label>
+
+				<ul class="menu-box">
+					<li>
+						<a class="menu-item" href="#projet" title="Mes Projets"
+							>Mes Projets</a
+						>
+					</li>
+					<li>
+						<a class="menu-item" href="#cv" title="Ma Formation"
+							>Ma Formation</a
+						>
+					</li>
+					<li>
+						<a class="menu-item" href="#article" title="Mes Article"
+							>Mes Articles</a
+						>
+					</li>
+					<li>
+						<a class="menu-item" href="#contact" title="Contactez Moi"
+							>Contactez-Moi</a
+						>
+					</li>
+				</ul>
+			</div>
+			<ul class="row">
+				<li><a href="#projet" title="Mes Projets">Mes Projets</a></li>
+				<li><a href="#cv" title="Ma Formation">Ma Formation</a></li>
+				<li><a href="#article" title="Mes Article">Mes Articles</a></li>
+				<li><a href="#contact" title="Contactez Moi">Contactez-Moi</a></li>
+			</ul>
+		</nav>
+
+		<h2>Mon Portfolio</h2>
+
+		<main>
+			<div class="projet">
+				<section id="projet">
+					<h3>projet n°1</h3>
+					<img src="https://via.placeholder.com/150" alt="Image d'un Projet" />
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero,
+						quod!
+					</p>
+					<a href="#">Voir la suite</a>
+				</section>
+				<br />
+				<section>
+					<h3>projet n°2</h3>
+					<img src="https://via.placeholder.com/150" alt="Image d'un Projet" />
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero,
+						quod!
+					</p>
+					<a href="#">Voir la suite</a>
+				</section>
+				<br />
+				<section>
+					<h3>projet n°3</h3>
+					<img src="https://via.placeholder.com/150" alt="Image d'un Projet" />
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero,
+						quod!
+					</p>
+					<a href="#">Voir la suite</a>
+				</section>
+			</div>
+			<hr />
+			<section id="cv">
+				<h3>Mes Formations</h3>
+				<img src="inc/images/avataaars.png" alt="Photo de la Personne" />
+				<ul>
+					<li>schwachtgen</li>
+					<li>nicolas</li>
+					<li>39 ans</li>
+					<li>smectaz57@gmail.com</li>
+					<li>06.08.47.01.86</li>
+				</ul>
+				<div>
+					<p>2021</p>
+					<p>
+						Formation DAM chez DORANCO (Dévelopeur d'Application Multimédia)
+					</p>
+				</div>
+				<br />
+				<div>
+					<p>2022</p>
+					<p>Formation DSD chez DORANCO (Dévelopeur de sites dynamiques)</p>
+				</div>
+				<br />
+				<div>
+					<p>2002</p>
+					<p>BTS hôtelier option A gestion hôtelière</p>
+				</div>
+				<br />
+				<a
+					href="https://cv-de-nicolas-schwachtgen.000webhostapp.com/"
+					target="_blank"
+					>mon cv complet</a
+				>
+			</section>
+			<hr />
+			<div class="article">
+				<article id="article">
+					<h3>Mes Articles 1</h3>
+					<img src="https://via.placeholder.com/150" alt="Image d'un Article" />
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero,
+						quod!
+					</p>
+					<a href="#">Voir la suite</a>
+					<a href="#">99 Commentaires</a>
+				</article>
+				<br />
+				<article>
+					<h3>Mes Articles 2</h3>
+					<img src="https://via.placeholder.com/150" alt="Image d'un Article" />
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero,
+						quod!
+					</p>
+					<a href="#">Voir la suite</a>
+					<a href="#">77 commentaires</a>
+				</article>
+			</div>
+		</main>
+		<hr />
+		<form action="#" method="get" class="contact">
+			<div>
+				<h3 id="contact">Contactez Moi</h3>
+				<label for="name">Nom et Prénom</label>
+				<input
+					type="text"
+					placeholder="Entrez votre Nom et votre Prénom"
+					id="name"
+					name="name"
+				/>
+			</div>
+			<div>
+				<label for="email" class="">Email</label>
+				<input
+					type="email"
+					placeholder="Entrez votre Email"
+					id="email"
+					name="email"
+				/>
+			</div>
+			<div>
+				<textarea name="message" id="mot" rows="10"></textarea>
+			</div>
+			<div>
+				<input type="submit" value="Envoyer" />
+			</div>
+		</form>
+
+		<hr />
+		<footer>
+			<a href="#" title="Revenir au Début">www.monportfolio.com</a>
+		</footer>
+	</body>
+</html>

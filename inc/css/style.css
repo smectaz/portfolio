@@ -1,0 +1,388 @@
+/*déclaration variable*/
+:root {
+	--font-size-title: 5px;
+	--font-size-title3: calc(var(--font-size-title)+3);
+	--font-size-title5: calc(var(--font-size-title) * 5);
+	--font-size-title7: calc(var(--font-size-title) * 7);
+}
+/*style generale en first mobile*/
+body {
+	background-image: url(../images/drops-6392473_1920.jpg);
+	background-attachment: fixed;
+	background-repeat: repeat;
+
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+/*image avec bord arrondi*/
+
+img {
+	border-radius: 3px;
+}
+
+/*création d'un menu caché pour les malvoyants*/
+.cache {
+	position: absolute;
+	top: -10em;
+	z-index: 100;
+	width: 100%;
+}
+.cache a {
+	background-color: #fff;
+	font-weight: 700;
+	position: absolute;
+	left: 0;
+	right: 0;
+	text-align: center;
+	padding: 0.5rem 0;
+}
+
+.cache a:focus,
+.cache a:hover {
+	top: 10rem;
+	text-decoration: none;
+}
+
+/*style header*/
+
+header div {
+	display: flex;
+	flex-direction: row;
+}
+
+header form {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+/*ecriture titre*/
+h1,
+h2,
+h3 {
+	font-weight: bold;
+}
+h1 {
+	font-size: var(--font-size-title7);
+}
+h2 {
+	font-size: var(--font-size-title5);
+}
+
+h3 {
+	font-size: var(--font-size-title3);
+}
+/*menu deroulant*/
+#menu-toggle {
+	opacity: 0;
+}
+
+#menu-toggle:checked ~ .menu-btn > span {
+	transform: rotate(45deg);
+}
+#menu-toggle:checked ~ .menu-btn > span::before {
+	top: 0;
+	transform: rotate(0);
+}
+#menu-toggle:checked ~ .menu-btn > span::after {
+	top: 0;
+	transform: rotate(90deg);
+}
+#menu-toggle:checked ~ .menu-box {
+	visibility: visible;
+	left: 0;
+}
+
+.menu-btn {
+	display: flex;
+	align-items: center;
+	position: sticky;
+	top: 200px;
+	left: 50%;
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
+	display: block;
+	position: absolute;
+
+	width: 100%;
+	height: 2px;
+
+	background-color: black;
+
+	transition-duration: 0.25s;
+}
+.menu-btn > span::before {
+	content: "";
+	top: -8px;
+}
+.menu-btn > span::after {
+	content: "";
+	top: 8px;
+}
+
+.menu-box {
+	display: block;
+	position: sticky;
+	visibility: hidden;
+	top: 160px;
+	left: -100%;
+	border: 1px solid black;
+	width: 150px;
+	height: 10%;
+	margin: 0;
+	padding-bottom: 10px;
+	list-style: none;
+	background-color: whitesmoke;
+	box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+	transition-duration: 0.25s;
+}
+
+.menu-item {
+	display: block;
+	padding: 6px;
+	color: black;
+	font-size: 15px;
+	font-weight: 600;
+
+	text-decoration: none;
+
+	transition-duration: 0.25s;
+}
+
+/*cache le menu grand ecran*/
+.row {
+	visibility: hidden;
+}
+
+/*main en colonne*/
+
+section,
+article,
+.contact,
+.contact div,
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+p,
+span {
+	text-align: center;
+}
+/*style section projets*/
+section ul {
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+}
+section a {
+	color: black;
+	background-color: honeydew;
+	text-decoration: none;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+	border: 1px solid black;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+/*style formation*/
+#cv img {
+	width: 200px;
+	height: 200px;
+}
+
+p {
+	margin-right: 20px;
+}
+section div {
+	display: flex;
+	flex-direction: row;
+}
+/*style article*/
+article a {
+	color: black;
+	background-color: honeydew;
+	text-decoration: none;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+	border: 1px solid black;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+/*css pour ecran moyen*/
+
+@media screen and (min-width: 600px) {
+	li {
+		list-style-type: none;
+	}
+	.row {
+		display: flex;
+		visibility: visible;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	.row a {
+		color: black;
+		background-color: honeydew;
+		text-decoration: none;
+		padding: 0.7rem;
+		margin-bottom: 1rem;
+		border: 1px solid black;
+		border-radius: 5px;
+	}
+	.hamburger-menu {
+		top: 0;
+		left: 0;
+		visibility: hidden;
+	}
+	h2 {
+		margin-top: 90px;
+		text-align: center;
+	}
+
+	#cv img {
+		width: 200px;
+		height: 200px;
+	}
+}
+
+/*css pour grand ecran*/
+
+@media screen and (min-width: 1050px) {
+	/*style genérale*/
+	body {
+		background-image: url(../images/drops-6392473_1920.jpg);
+		background-attachment: fixed;
+		background-repeat: repeat;
+		color: black;
+	}
+	/*style header*/
+
+	header {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+	header form {
+		margin-top: 34px;
+		margin-right: 20px;
+		height: 30px;
+	}
+	h1 {
+		margin-left: 150px;
+	}
+
+	h2 {
+		text-align: center;
+	}
+
+	/*style navigation*/
+	nav {
+		display: flex;
+	}
+
+	nav li {
+		list-style-type: none;
+		align-items: center;
+		margin: 0.5rem;
+	}
+
+	li {
+		list-style-type: none;
+	}
+	.row {
+		display: flex;
+		visibility: visible;
+		flex-direction: row;
+		justify-content: space-around;
+		margin-top: 60px;
+	}
+	.row a {
+		color: black;
+		background-color: honeydew;
+		text-decoration: none;
+		margin-left: 50px;
+		padding: 0.7rem;
+		margin-bottom: 0.5rem;
+		border: 1px solid black;
+		border-radius: 5px;
+	}
+
+	.hamburger-menu {
+		visibility: hidden;
+	}
+
+	/*style partie projet*/
+	.projet {
+		display: flex;
+		flex-direction: row;
+	}
+	.projet section {
+		justify-content: space-between;
+		width: 35%;
+	}
+
+	section a {
+		color: black;
+		background-color: honeydew;
+		text-decoration: none;
+		padding: 0.5rem;
+		margin-bottom: 0.5rem;
+		border: 1px solid black;
+		border-radius: 5px;
+		text-decoration: none;
+	}
+
+	/*style partie Formation*/
+
+	section {
+		display: flex;
+		flex-direction: column;
+	}
+	section ul li {
+		margin-right: 30px;
+	}
+	section ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	#cv img {
+		width: 200px;
+		height: 200px;
+	}
+
+	/*style partie article*/
+	.article {
+		display: flex;
+		flex-direction: row;
+	}
+	.article article {
+		justify-content: space-between;
+		width: 50%;
+	}
+	article a {
+		color: black;
+		background-color: honeydew;
+		padding: 0.5rem;
+		margin-bottom: 0.5rem;
+		border: 1px solid black;
+		border-radius: 5px;
+		text-decoration: none;
+	}
+	form {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}
