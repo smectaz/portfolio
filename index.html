@@ -36,37 +36,23 @@
 				<input type="submit" value="rechercher" />
 			</form>
 		</header>
+		<nav role="navigation" class="burger">
+			<div id="menuToggle">
+				<input type="checkbox" />
 
-		<nav>
-			<div class="hamburger-menu">
-				<input id="menu-toggle" type="checkbox" />
-				<label class="menu-btn" for="menu-toggle">
-					<span></span>
-				</label>
+				<span></span>
+				<span></span>
+				<span></span>
 
-				<ul class="menu-box">
-					<li>
-						<a class="menu-item" href="#projet" title="Mes Projets"
-							>Mes Projets</a
-						>
-					</li>
-					<li>
-						<a class="menu-item" href="#cv" title="Ma Formation"
-							>Ma Formation</a
-						>
-					</li>
-					<li>
-						<a class="menu-item" href="#article" title="Mes Article"
-							>Mes Articles</a
-						>
-					</li>
-					<li>
-						<a class="menu-item" href="#contact" title="Contactez Moi"
-							>Contactez-Moi</a
-						>
-					</li>
+				<ul id="menu">
+					<li><a href="#projet" title="Mes Projets">Mes Projets</a></li>
+					<li><a href="#cv" title="Ma Formation">Ma Formation</a></li>
+					<li><a href="#article" title="Mes Article">Mes Articles</a></li>
+					<li><a href="#contact" title="Contactez Moi">Contactez-Moi</a></li>
 				</ul>
 			</div>
+		</nav>
+		<nav>
 			<ul class="row">
 				<li><a href="#projet" title="Mes Projets">Mes Projets</a></li>
 				<li><a href="#cv" title="Ma Formation">Ma Formation</a></li>
@@ -86,7 +72,7 @@
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero,
 						quod!
 					</p>
-					<a href="#">Voir la suite</a>
+					<a href="a-suivre.html" target="_blank">Voir la suite</a>
 				</section>
 				<br />
 				<section>
@@ -96,7 +82,7 @@
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero,
 						quod!
 					</p>
-					<a href="#">Voir la suite</a>
+					<a href="a-suivre-2.html" target="_blank">Voir la suite</a>
 				</section>
 				<br />
 				<section>
@@ -106,7 +92,7 @@
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero,
 						quod!
 					</p>
-					<a href="#">Voir la suite</a>
+					<a href="a-suivre-3.html" target="_blank">Voir la suite</a>
 				</section>
 			</div>
 			<hr />
@@ -152,8 +138,10 @@
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero,
 						quod!
 					</p>
-					<a href="#">Voir la suite</a>
-					<a href="#">99 Commentaires</a>
+					<div>
+						<a href="a-suivre-4.html" target="_blank">Voir la suite</a>
+						<a href="comment99.html" target="_blank">99 Commentaires</a>
+					</div>
 				</article>
 				<br />
 				<article>
@@ -163,34 +151,31 @@
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero,
 						quod!
 					</p>
-					<a href="#">Voir la suite</a>
-					<a href="#">77 commentaires</a>
+					<div>
+						<a href="a-suivre-5.html" target="_blank">Voir la suite</a>
+						<a href="comment77.html" target="_blank">77 commentaires</a>
+					</div>
 				</article>
 			</div>
 		</main>
 		<hr />
+		<h3 id="contact">Contactez Moi</h3>
 		<form action="#" method="get" class="contact">
 			<div>
-				<h3 id="contact">Contactez Moi</h3>
 				<label for="name">Nom et Prénom</label>
-				<input
-					type="text"
-					placeholder="Entrez votre Nom et votre Prénom"
-					id="name"
-					name="name"
-				/>
+				<input type="text" placeholder="Nom et Prénom" id="name" name="name" />
 			</div>
 			<div>
 				<label for="email" class="">Email</label>
-				<input
-					type="email"
-					placeholder="Entrez votre Email"
-					id="email"
-					name="email"
-				/>
+				<input type="email" placeholder="Email" id="email" name="email" />
 			</div>
 			<div>
-				<textarea name="message" id="mot" rows="10"></textarea>
+				<textarea
+					name="message"
+					id="mot"
+					rows="10"
+					placeholder="message"
+				></textarea>
 			</div>
 			<div>
 				<input type="submit" value="Envoyer" />
@@ -200,6 +185,35 @@
 		<hr />
 		<footer>
 			<a href="#" title="Revenir au Début">www.monportfolio.com</a>
+			<div id="reseaux">
+				<a
+					href="https://www.instagram.com/accounts/login/?hl=fr"
+					target="_blank"
+					title="lien instagram"
+				>
+					<img src="/inc/images/instagram.png" alt="logo instagram" />
+				</a>
+				<a
+					href="https://twitter.com/login?lang=fr"
+					target="_blank"
+					title="lien twitter"
+				>
+					<img src="/inc/images/twitter-sign.png" alt="logo twitter" />
+				</a>
+				<a
+					href="https://m.facebook.com/?locale=fr_FR"
+					target="_blank"
+					title="lien facebook"
+				>
+					<img
+						src="/inc/images/240_F_246266252_NKgTGTfCWV5zfV1BEaiGJyl8LO0I5PcI.jpg"
+						alt="logo facebook"
+					/>
+				</a>
+				<a href="https://github.com/login" target="_blank" title="lien github">
+					<img src="/inc/images/733609.png" alt="logo github" />
+				</a>
+			</div>
 		</footer>
 	</body>
 </html>
