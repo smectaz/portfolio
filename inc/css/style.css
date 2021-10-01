@@ -1,9 +1,9 @@
 /*déclaration variable*/
 :root {
 	--font-size-title: 5px;
-	--font-size-title3: calc(var(--font-size-title)+3);
-	--font-size-title5: calc(var(--font-size-title) * 5);
-	--font-size-title7: calc(var(--font-size-title) * 7);
+	--font-size-title3: calc(var(--font-size-title) * 3);
+	--font-size-title5: calc(var(--font-size-title) * 4);
+	--font-size-title7: calc(var(--font-size-title) * 5);
 }
 /*style generale en first mobile*/
 body {
@@ -48,6 +48,7 @@ img {
 header div {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 }
 
 header form {
@@ -55,15 +56,23 @@ header form {
 	flex-direction: row;
 	justify-content: center;
 }
+header input {
+	border-radius: 5px;
+	margin-right: 10px;
+	box-shadow: 0px 5px 5px 0px black;
+	padding: 5px;
+}
 
 /*ecriture titre*/
 h1,
 h2,
-h3 {
-	font-weight: bold;
+h3,
+h4 {
+	font-weight: 700;
 }
 h1 {
 	font-size: var(--font-size-title7);
+
 	text-align: center;
 }
 h2 {
@@ -79,7 +88,7 @@ h3 {
 #menuToggle {
 	display: block;
 	position: relative;
-	top: 10px;
+	top: -100px;
 	left: 0px;
 
 	z-index: 1;
@@ -179,8 +188,8 @@ h3 {
 section,
 article,
 article div,
-.contact,
-.contact div,
+#contact,
+#contact div,
 footer {
 	display: flex;
 	flex-direction: column;
@@ -232,6 +241,17 @@ article a {
 	text-decoration: none;
 }
 
+/*style pour formulaire*/
+
+#contact input,
+textarea {
+	justify-content: space-around;
+	border-radius: 10px;
+	width: 100%;
+	padding: 5px;
+	margin-bottom: 10px;
+	box-shadow: 0px 5px 5px 0px black;
+}
 /*style du footer*/
 footer a {
 	text-decoration: none;
@@ -241,10 +261,35 @@ footer div {
 	margin-top: 20px;
 }
 
-footer div a {
+.lien {
 	margin-right: 10px;
+	color: black;
+	background-color: honeydew;
+	text-decoration: none;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+	border: 1px solid black;
+	border-radius: 5px;
+	text-decoration: none;
 }
-
+.reseaux {
+	margin-right: 10px;
+	color: black;
+	background-color: honeydew;
+	text-decoration: none;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+	border: 1px solid black;
+	border-radius: 5px;
+	text-decoration: none;
+}
+/*css pour petit écran*/
+@media screen and (min-width: 400px) {
+	#menuToggle {
+		top: -100px;
+		left: 6px;
+	}
+}
 /*css pour ecran moyen*/
 
 @media screen and (min-width: 600px) {
@@ -279,16 +324,22 @@ footer div a {
 		width: 200px;
 		height: 200px;
 	}
-	.contact {
+	#contact {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
+	}
+	#contact input,
+	textarea {
 		justify-content: space-around;
+		border-radius: 10px;
+		width: 100%;
 	}
 	footer {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
 	}
+
 	footer div {
 		margin-top: 0px;
 	}
@@ -300,13 +351,6 @@ footer div a {
 /*css pour grand ecran*/
 
 @media screen and (min-width: 1050px) {
-	/*style genérale*/
-	body {
-		background-image: url(../images/drops-6392473_1920.jpg);
-		background-attachment: fixed;
-		background-repeat: repeat;
-		color: black;
-	}
 	/*style header*/
 
 	header {
@@ -362,11 +406,11 @@ footer div a {
 	}
 
 	/*style partie projet*/
-	.projet {
+	#projet {
 		display: flex;
 		flex-direction: row;
 	}
-	.projet section {
+	#projet section {
 		justify-content: space-between;
 		width: 35%;
 	}
@@ -403,11 +447,11 @@ footer div a {
 	}
 
 	/*style partie article*/
-	.article {
+	#article {
 		display: flex;
 		flex-direction: row;
 	}
-	.article article {
+	#article article {
 		width: 50%;
 		margin-bottom: 0.5rem;
 	}
@@ -427,11 +471,6 @@ footer div a {
 		justify-content: space-around;
 	}
 
-	.contact {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-	}
 	footer {
 		display: flex;
 		flex-direction: row;
