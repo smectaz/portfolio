@@ -62,6 +62,9 @@ header input {
 	box-shadow: 0px 5px 5px 0px black;
 	padding: 5px;
 }
+header img {
+	display: none;
+}
 
 /*ecriture titre*/
 h1,
@@ -84,11 +87,14 @@ h3 {
 	font-size: var(--font-size-title3);
 	text-align: center;
 }
+h4 {
+	text-align: center;
+}
 /*menu deroulant*/
 #menuToggle {
 	display: block;
 	position: relative;
-	top: -100px;
+	top: -70px;
 	left: 0px;
 
 	z-index: 1;
@@ -283,16 +289,13 @@ footer div {
 	border-radius: 5px;
 	text-decoration: none;
 }
-/*css pour petit écran*/
-@media screen and (min-width: 400px) {
-	#menuToggle {
-		top: -100px;
-		left: 6px;
-	}
-}
+
 /*css pour ecran moyen*/
 
 @media screen and (min-width: 600px) {
+	header img {
+		display: initial;
+	}
 	li {
 		list-style-type: none;
 	}
